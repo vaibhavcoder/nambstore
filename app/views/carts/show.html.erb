@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+<div class="style2 style10" >SHOPPING CART </div>
+<div >
+<table width="90%" border="0">
+  <tr style="border-bottom:solid 1px #CCCCCC;">
+    <td width="22%" class="style5">Item</td>
+    <td width="33%">&nbsp;</td>
+    <td width="8%"><span class="style5">Price</span></td>
+    <td width="6%" class="style5">Qty</td>
+    <td width="8%" class="style5">Total</td>
+    <td width="23%"><div class="style5"></div></td>
+  </tr>
+<% @cart.line_items.each do |item| %>
+  <tr>
+    <td><%= image_tag(item.product.image_url,:size=>"102x74") %></td>
+    <td class="style8"><%= item.product.title %></td>
+    <td class="style7"><%= item.product.price %></td>
+    <td class="style7"><%= item.quantity %></td>
+    <td class="style7"><%= item.product.price %></td>
+    <td><div class="style5"><a href="#" class="style8">remove</a></div></td>
+  </tr>
+  <% end %>
+  <tr>
+    <td><%= image_tag("namb/continue.png") %></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class="style9">Subtotal: <%= number_to_currency(@cart.total_price) %></td>
+  </tr>
+  <tr>
+       
+  </tr>
+  <tr>
+    <td><%= button_to 'Empty cart' , @cart, :method => :delete,:confirm => 'Are you sure?' %>
+</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+	
+    
+	
+	<td><%= image_tag("namb/checkout.png") %></td>
+	
+	</tr>
+</table>
+
+</div>
+
+
+<div style="clear:both;"></div>
+
+
+
+<div>
+      <div align="right">
+        <table width="215" border="0">
+          <tr>
+            <td width="74%"><%= link_to image_tag("namb/back2.png"), carts_path %></td>
+            <td width="26%"><a href="index.html"><img src="images/namb/startover2.png" alt="" width="167" height="44" /></a></td>
+          </tr>
+        </table>
+        </div>
+	     
+  </div>
+

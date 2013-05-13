@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nambstore</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body class="two-col">
+<div class="main_container">
+<div id="header" class="container_bg">
+  <div style="float:left;"><%= image_tag("logo.jpg") %></div>
+          <div style="float:right;  margin-top:15px;"><a href="#" class="style1">Self Checkout &nbsp;</a> </div>
+    
+    <!-- <a href="http://www.namb.net"><img border="0" alt="banner" src="/images/namb/logoNAMB.jpg" /></a> -->
+
+</div>
+<div style="clear:both"></div>
+<!-- <div class="portal-header2">
+  Partner Resource Portal
+</div> -->
+<div>
+	<%= image_tag("namb/PBDbanner-1e19c.jpg",:size=>"850x81")%>
+  </div>
+<div class="yellow-bar" align="right">Welcome Back: Lorenzo Dixon</div>
+<div id="wrapper" class="container">
+<%= yield %>
+</div>
+<div style="clear:both"></div>
+</div>
+<%= image_tag("namb/dotted-linee19c.gif",:size => "850x11", :alt => "Dotted Line") %>
+<%= image_tag("namb/namb-footere19c.jpg",:size => "850x62", :alt => "Edit Entry") %>
+</div>
+</body>
+</html>

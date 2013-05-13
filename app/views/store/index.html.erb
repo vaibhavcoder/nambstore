@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<div class="style2" >PROMOTIONAL ITEMS</div>
+<% @products.each do |product| %>
+
+<div class="product">
+
+<div class="product1">
+  <div align="center"><%= image_tag(product.image_url,:size=>"102x74") %>
+</div>
+</div>
+<div class="product2 style3" align="center"><%= product.title %><br />
+	<%= sprintf("$%0.02f", product.price) %>
+	<%= button_to 'Add to Cart' , line_items_path(:product_id => product) %>
+
+
+</div>
+
+</div>
+
+<% end %>
