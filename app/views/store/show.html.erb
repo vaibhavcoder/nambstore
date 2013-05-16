@@ -1,1 +1,46 @@
-<h1>hello world</h1>
+<p id="notice"><%= notice %></p>
+
+<div class="middle">
+    <div class="promotional">
+      <div class="style2 style4" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEND NORTH AMERICA NOTEPADS</div>
+      <div class="product" style="margin-top:10px;"><%= image_tag(@product.image_url) %></div>
+      <div style="float:right; margin-right:100px;">
+        <table width="215" border="0">
+          <tr>
+            <td><div align="center" class="style5">Price</div></td>
+          </tr>
+          <tr>
+            <td><div align="center" class="style6"><%= sprintf("$%0.02f", @product.price) %></div></td>
+          </tr>
+          <tr>
+            <td><div align="center"></div></td>
+          </tr>
+          <tr>
+            <td><form method="post" action="">
+              <div align="center">
+                <input name="text" type="text" style=" border:solid 1px #CCCCCC; width:50px; height:20px;" value="1" />
+              </div>
+            </form></td>
+          </tr>
+          <tr>
+            <td><div align="center"></div></td>
+          </tr>
+          <tr>
+            <td><div align="center">
+            	<%= button_to "Add To Cart", line_items_path(:product_id => @product.id )%>
+            	</div></td>
+          </tr>
+        </table>
+      </div>
+	  
+    </div>
+	<div style="clear:both;"></div>
+    <div style="margin-top:30px;">
+      <div align="right">
+        <table width="215" border="0">
+          <tr>
+            <td width="66%"><%= image_tag("namb/back2.png") %></td>
+            <td width="34%"><%= image_tag("namb/startover2.png") %></a></td>
+          </tr>
+        </table>
+        </div>

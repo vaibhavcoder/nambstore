@@ -9,8 +9,9 @@
 </div>
 </div>
 <div class="product2 style3" align="center"><%= product.title %><br />
-	<%= sprintf("$%0.02f", product.price) %>
-	<%= button_to 'Add to Cart' , line_items_path(:product_id => product) %>
+	
+	<%= sprintf("$%0.02f", product.price) %><br/>
+	<%= link_to('Show', show_path(product)) %>
 
 
 </div>
