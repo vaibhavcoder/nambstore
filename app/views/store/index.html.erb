@@ -1,21 +1,17 @@
 <p id="notice"><%= notice %></p>
 <div class="style2" >PROMOTIONAL ITEMS</div>
 <% @products.each do |product| %>
-
+<a href="store/<%= product.id %>">
 <div class="product">
-
-<div class="product1">
-  <div align="center"><%= image_tag(product.image_url,:size=>"102x74") %>
+	<div class="product1">
+	  <div align="center"><%= image_tag(product.image_url,:size=>"102x74") %>
+	</div>
 </div>
+<div class="product2 style3" align="center">
+	<%= product.title %><br />
+	<%= sprintf("$%0.02f", product.price) %><br/>	
 </div>
-<div class="product2 style3" align="center"><%= product.title %><br />
-	
-	<%= sprintf("$%0.02f", product.price) %><br/>
-	<%= link_to('Show', show_path(product)) %>
-
-
-</div>
-
+</a>
 </div>
 
 <% end %>
